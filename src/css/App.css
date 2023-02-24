@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 45px;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+h1 i {
+  color: #28B463;
+  font-size: 40px;
+  margin-left: 10px;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.empty {
+  margin-top: 60px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: none;
+  font-size: 30px;
+}
+
+.itemCards {
+  padding-top: 110px;
+  display: flex;
+  justify-content: center;
+  gap: 110px 30px;
+  flex-wrap: wrap;
+}
+.itemCards .card-container .card-row .card {
+  position: relative;
+  border-radius: 10px;
+  width: 300px;
+  position: relative;
+}
+.itemCards .card-container .card-row .card .card-txt {
+  border-radius: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding-left: 20px;
+  padding-top: 100px;
+  padding-bottom: 10px;
+}
+.itemCards .card-container .card-row .card .card-txt button {
+  margin-bottom: 10px;
+  background: rgb(246, 98, 44);
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.itemCards .card-container .card-row .card .card-txt span {
+  display: block;
+  font-size: 30px;
+}
+.itemCards .card-container .card-row .card .card-txt .price {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 23px;
+}
+.itemCards .card-container .card-row .card img {
+  left: 50%;
+  transform: translate(-50%);
+  top: -100px;
+  position: absolute;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 200px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.cart-top {
+  margin-top: 30px;
+  padding: 12px;
+  background: rgba(255, 248, 220, 0.768);
+  border-radius: 10px;
+  text-align: center;
+}
+.cart-top h5 {
+  font-size: 22px;
+  font-weight: normal;
+}
+
+.card-area {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding-bottom: 83px;
+}
+.card-area .card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.card-area .card-content .remove {
+  cursor: pointer;
+  background: rgb(235, 66, 66);
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 10px;
+  color: #fff;
+}
+.card-area .card-content .btns {
+  display: flex;
+  gap: 10px;
+}
+.card-area .card-content .btns .minus,
+.card-area .card-content .btns .plus {
+  border: none;
+  font-size: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.card-area .card-content .btns .minus i,
+.card-area .card-content .btns .plus i {
+  font-size: 22px;
+}
+.card-area:last-child {
+  border-bottom: none;
+}
+.card-area span {
+  text-align: center;
+  width: 115px;
+  font-size: 20px;
+  font-size: 22px;
+}
+.card-area img {
+  width: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 110px;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  padding: 20px 0;
+  background: #ECF0F1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.bottom p {
+  color: #000;
+  font-size: 30px;
+  padding-right: 20px;
+}
+.bottom .clear {
+  cursor: pointer;
+  background: rgb(235, 66, 66);
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 10px;
+  color: #fff;
+}
+.bottom .buy {
+  margin-left: 20px;
+  cursor: pointer;
+  background: rgb(113, 170, 177);
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 10px;
+  color: #fff;
+}
+
+@media only screen and (max-width: 992px) {
+  .card-area .card-content {
+    padding-top: 18px;
+    padding-bottom: 30px;
+    flex-direction: column;
+  }
+  .card-area .card-content span {
+    width: 100%;
+    padding: 0;
+    font-size: 24px;
+    padding-bottom: 15px;
+  }
+  .card-area .card-content .btns {
+    margin-bottom: 20px;
+  }
+  .card-area .card-content:last-child {
+    border-bottom: none;
+  }
+}
+@media only screen and (max-width: 578px) {
+  .card-area {
+    padding-bottom: 120px;
+  }
+  .bottom {
+    padding: 13px 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bottom p {
+    margin-bottom: 10px;
+    font-size: 25px;
+  }
+}/*# sourceMappingURL=App.css.map */
